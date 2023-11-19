@@ -1,12 +1,12 @@
 import './App.css';
+import HomePage from './pages/homePage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p> Stephen Byrne</p>
-      </header>
+        <HomePage></HomePage>
     </div>
+
   );
 }
 

@@ -1,0 +1,22 @@
+.social{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.185);
+    border-radius: 20px; 
+    text-align: center;
+    margin: 5%;
+}
+.socialElement{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.socialIcons:hover{
+    scale: 110%;
+}
+.socialIcons{
+    width: 50%;
+    margin: 7%;
+}
