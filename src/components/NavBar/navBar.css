@@ -1,12 +1,11 @@
-.navbar {
-    background-color: rgba(255, 255, 255, 0);
+.navbar { 
     display: flex;
     width: auto;
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    z-index: 20;
     text-decoration: none;
+    z-index: 20;
 }
   .nav-container {
     margin: 1%;
@@ -17,6 +16,7 @@
     max-width: 1500px;
     padding: 2px;
     position: relative;
+    z-index: 20;
     
     
   }

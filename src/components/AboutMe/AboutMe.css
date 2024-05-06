@@ -1,0 +1,5 @@
+.about-me{
+    height: 100%;
+    overflow: auto;
+    z-index: 20;
+}

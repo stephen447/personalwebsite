@@ -1,3 +1,18 @@
-.App{
+.app{
     height: 100%;
+    z-index: 0;
+    background-color: #00064d;
+    color: rgb(175, 174, 174);
+    
 }
+.glow {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+    border-radius: 50%;
+    pointer-events: none; /* Allows mouse events to pass through the element */
+    z-index: 10;
+    background: radial-gradient(#3d4389,  #00064d 60%);
+    
+  }
