@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar/navBar";
 // import Techstack from "../../components/techStack";
 // import Project from "../../components/project";
 import Skiing from "../../media/Skiing.jpg";
-import locpin from "../../media/locPin.png"
+import Experience from "../../components/Experience/Experience";
 // import Loading from "../media/loadingIcon.png"
 // import Javascript from "../media/Javascript-Icon.png"
 // import Python from "../media/python-Icon.png"
@@ -14,6 +14,7 @@ import locpin from "../../media/locPin.png"
 import AboutMe from "../../components/AboutMe/AboutMe"
 import "./HomePage.css"
 import { motion } from "framer-motion"
+import Socials from "../../components/Socials/socials";
 
 const HomePage = () =>{
     const [loading, setLoading] = useState(true);
@@ -38,26 +39,33 @@ const HomePage = () =>{
         },
       };
 
-    return(
+      return (
         <div className="home-page__container">
-            <NavBar></NavBar>
-            <div className="home-page__container--content">
-                <div className="home-page__container--content-left">
-                    <h2>Hi, Im Stephen Byrne. A developer.</h2>
-                    <p>I enjoy building things for the web and mobile.</p>
-                    <div className="location">
-                        <img className="locationIcon" src={locpin}/>
-                        <div className="locationText">
-                        Dublin, Ireland
-                        </div>
-                    </div>
-                    <img className="mainPicture" src={Skiing}/>
+          <div className="home-page__container--content">
+            <div className="home-page__container--content-left">
+              <div className="test">
+                <div className="home-page__container--intro">
+                  <h1 className="home-page__title--name">Stephen Byrne</h1>
+                  <h2 className="home-page__title--role">Full Stack Developer</h2>
+                  <p>I enjoy AI and building things for the web.</p>
                 </div>
-                <div className="home-page__container--content-right">
-                    <AboutMe></AboutMe>
+                <div className="home-page__container--picture">
+                  <img className="mainPicture" src={Skiing} />
                 </div>
+              </div>
+              <div className="home-page__navbar">
+                <NavBar />
+              </div>
+              <div className="socials">
+                  <Socials />
+              </div>
             </div>
+            <div className="home-page__container--content-right">
+              <AboutMe />
+              <Experience />
+            </div>
+          </div>
         </div>
-    )
+      );      
 }
 export default HomePage

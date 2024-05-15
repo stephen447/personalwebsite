@@ -7,6 +7,15 @@
   font-family: "Fjalla";
   src: url("./fonts/FjallaOne-Regular.ttf") format("truetype");
 }
+body {
+  font-family: "Rajdhani", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#root {
+  height: 150%;
+}
 
 
 

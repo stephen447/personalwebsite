@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Email from "../media/email.png"
-import LinkedIn from "../media/linkedIn.png"
-import GitHub from "../media/github.png"
+import Email from "../../media/email.png"
+import LinkedIn from "../../media/linkedIn.png"
+import GitHub from "../../media/github.png"
 import "./socials.css"
 export default function Socials () {
     return(

@@ -1,91 +1,57 @@
-.home{
-    display: flex;
-    margin: 20px;
-    align-items: center;
-}
-.personalDetails{
-    display: block;
-    max-width: 50%;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-    min-height: 100%;
-    padding: 1%;
-}
 .mainPicture{
     display: block;
-    max-width: 50%;
-    border-radius: 20px;
+    max-width: 100%;
+    border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
-.aboutMe{
-    margin: 5%;
-    border-radius: 20px;
-    padding: 2%;
+.home-page__container--picture{
+    width: 30%;
 }
-.projects{
-    margin: 5%;
-    border-radius: 20px;
-    padding: 1%;
-
+.home-page__container--content-nav{
+    background-color: aqua;
 }
-.experience{
-    margin: 5%;
-    border-radius: 20px;
-    padding: 1%;
-
+.home-page__container--intro{
+    z-index: 30;
 }
-.location{
+.test{
     display: flex;
     
 }
-.locationIcon{
-    width: 5%;
-    margin-left: auto;
-    
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.locationText{
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.test{
-    height: 100%;
-    text-align: center;
-}
-.loadingPage{
-    
-    padding-top: 20%;
-}
-.loadingImage{
-    
-    width: 30%;
-    animation: spin-anim 2s linear infinite;
-    
-}
-
-
 
 .home-page__container{
     z-index: 30;
 }
 .home-page__container--content{
-    display: flex;
     z-index: 30;
+    display: flex;
     
 }
 .home-page__container--content-left{
     width: 40%;
     z-index: 20;
+    padding-left: 10%;
+    padding-top: 5%;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .home-page__container--content-right{
     width: 60%;
+    padding: 5%;
+    z-index: 20;
+    overflow: auto;
 }
+
+.socials{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.home-page__navbar{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
 

@@ -2,4 +2,9 @@
     height: 100%;
     overflow: auto;
     z-index: 20;
+    border-radius: 10px;
+    padding: 3%;
+}
+.title-test{
+    z-index: 40;
 }

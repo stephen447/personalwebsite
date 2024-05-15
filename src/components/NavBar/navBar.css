@@ -1,5 +1,4 @@
 .navbar { 
-    display: flex;
     width: auto;
     font-size: 1.2rem;
     position: sticky;
@@ -21,7 +20,7 @@
     
   }
   a{
-    color: black;
+    color: rgb(227, 224, 224);
     text-decoration: none;
   }
   
