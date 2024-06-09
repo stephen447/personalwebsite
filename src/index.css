@@ -8,11 +8,12 @@
   src: url("./fonts/FjallaOne-Regular.ttf") format("truetype");
 }
 body {
-  background: 
-  linear-gradient(#e66465, #9198e5);
-  
-  background-size: cover;
-  font-family: 'Fjalla', sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
+
 
 

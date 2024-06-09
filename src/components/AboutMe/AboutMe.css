@@ -1,0 +1,9 @@
+.about-me{
+    overflow: auto;
+    z-index: 20;
+    border-radius: 10px;
+    margin: 0%;
+}
+.about-me__title{
+    z-index: 40;
+}
