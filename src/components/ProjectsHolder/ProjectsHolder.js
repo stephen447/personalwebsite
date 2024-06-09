@@ -9,7 +9,7 @@ export default function ProjectsHolder () {
             <h1 className="projects-holder__title">Projects</h1>
             <Project title="Full Stack Car Advertising App" year="2024" description={description2} techStack={["React", "Django", "PostgreSQL", "JavaScript", "CSS", "Docker"]} />
             <Project title="Digital Game Based Learning Platform" year="2023-2024" description={description3} techStack={["React", "Express JS", "Node JS", "JavaScript", "CSS", "Docker", "AWS" ]} />
-            <Project title="Masters Project" year="2021-2022" description={description1} techStack={["Machine Learning", "Python", "TensorFlow", "Vitis AI", ]} />
+            <Project title="Masters Project" year="2021-2022" description={description1} techStack={["Machine Learning", "Deep Learning", "Python", "TensorFlow", "Vitis AI" ]} />
         </div>
     )
     
