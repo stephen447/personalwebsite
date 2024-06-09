@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./AboutMe.css";
 export default function AboutMe() {
   return (
     <>
-      <div className="about-me">
-        <h1 className="title-test">About Me</h1>
+      <div className="about-me" id="about-me">
+        <h1 className="about-me__title">About Me</h1>
         <p>
-          My name is Stephen Byrne. I completed my Masters in computer and
-          Electronic Engineering in 2022. I'm currently working at Imagine
-          Robotify as a software developer. I'm passionate about web development
-          and AI.
+          My name is Stephen Byrne. I completed my Masters in Computer and
+          Electronic Engineering at Trinity College Dublin in 2022. I'm
+          currently working at Imagine Robotify as a software developer. I'm
+          passionate about web development and Artifital Intelligence.
         </p>
         <p>
           I graduated with a distinction from my Master's in Computer and

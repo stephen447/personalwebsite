@@ -1,14 +1,9 @@
-.mainProject{
-    border-radius: 20px;
-    margin: 3%;
-    padding: 3%;
-    text-align: center;
+.project__container:hover{
+    background-color: rgba(255, 255, 255, 0.052);
+    border-radius: 10px;
+    z-index: 20;
 }
-.languagesList{
-    margin: auto;
-    width: 50%;
-}
-.projectDescription{
-    display: flex;
-    
+.project__container{
+    z-index: 20;
+    padding: 10px;
 }
