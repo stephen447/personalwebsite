@@ -14,30 +14,32 @@ export default function Experience(props) {
       </h2>
       <p className="experience__year">{props.year}</p>
       <p className="experience__description">
-        At Imagine Robotify, I'm a apart of an agile team, contributing to the
-        development of cutting-edge web applications. My involvement spans the
-        entire project lifecycle, including planning, development, deployment,
-        and maintenance. Key responsibilities include:
+        At Imagine Robotify, I am part of an agile team dedicated to developing
+        cutting-edge web applications and web-based game engines. My role
+        encompasses the entire project lifecycle, including planning,
+        development, deployment, and maintenance.
       </p>
       <p>
-        Testing: Executed comprehensive unit, integration, and end-to-end tests
-        using Cypress and Jest to ensure high-quality, reliable applications.
+        I craft dynamic and responsive React components to enhance the user
+        interface and overall user experience. Additionally, I engineer RESTful
+        APIs using Express.js to facilitate seamless and scalable communication
+        between the server, clients and various AWS services.
       </p>
       <p>
-        Deployment: Developed Dockerfiles for efficient deployment of services,
-        facilitating streamlined and consistent releases.
+        A key aspect of my work involves helping to develop a 3D browser-based
+        game engine utilizing THREE.js and Cannon.js with an
+        Entity-Component-System (ECS) architecture, which allows for efficient
+        game design and development.
       </p>
       <p>
-        API Development: Engineered RESTful APIs using Express.js to enable
-        seamless and scalable server-client communication.
+        I execute comprehensive unit, integration, and end-to-end testing using
+        Cypress and Jest to ensure our applications are of the highest quality
+        and reliability. Furthermore, I use Docker to streamline the deployment
+        of services, ensuring consistent and reliable application updates.
       </p>
       <p>
-        Front-end Development: Crafted dynamic and responsive React components,
-        enhancing the user interface and overall user experience.
-      </p>
-      <p>
-        Code Review: Conducted thorough code reviews for peers, ensuring
-        adherence to best practices and maintaining code quality.
+        To uphold code quality and adhere to best practices, I conduct thorough
+        code reviews for my peers.
       </p>
     </div>
   );
