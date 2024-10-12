@@ -27,7 +27,7 @@ export default function Experience(props) {
       </p>
       <p>
         A key aspect of my work involves helping to develop a 3D browser-based
-        game engine utilizing THREE.js and Cannon.js with an
+        game engine utilizing THREE.js and Cannon ES with an
         Entity-Component-System (ECS) architecture, which allows for efficient
         game design and development.
       </p>
