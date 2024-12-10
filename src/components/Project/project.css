@@ -7,3 +7,28 @@
     z-index: 20;
     padding: 10px;
 }
+.title__container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.project__link{
+    width: 25px;
+    margin-left: 2%;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.project__image--link:hover{
+    transform: scale(1.2);
+    transition: ease 0.3s;
+}
+
+.project__image--link{
+    width: 100%;
+    
+    
+}

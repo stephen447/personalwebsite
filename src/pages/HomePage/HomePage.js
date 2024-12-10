@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/NavBar/navBar";
 // import Socials from "../../components/socials"
 // import Techstack from "../../components/techStack";
@@ -11,12 +11,20 @@ import ExperienceHolder from "../../components/ExperienceHolder/ExperienceHolder
 // import cplusplus from  "../media/C++-Icon.png"
 // import react from  "../media/reacr-Icon.png"
 // import Django from "../media/django-Icon.png"
+import DownArrow from "../../media/down-arrow.gif"
 import AboutMe from "../../components/AboutMe/AboutMe"
 import "./HomePage.css"
 import Socials from "../../components/Socials/socials";
 import ProjectsHolder from "../../components/ProjectsHolder/ProjectsHolder";
 
 const HomePage = () =>{
+      const [width, setWidth] = useState(window.innerWidth);
+      useEffect(() => {
+        window.addEventListener("resize", () => {
+          console.log(window.innerWidth)
+          setWidth(window.innerWidth);
+        })}, []);
+        
       return (
         <div className="home-page__container">
           <div className="home-page__container--content">
@@ -24,7 +32,7 @@ const HomePage = () =>{
               <div className="test">
                 <div className="home-page__container--intro">
                   <h1 className="home-page__title--name">Stephen Byrne</h1>
-                  <h2 className="home-page__title--role">Full Stack Developer</h2>
+                  <h2 className="home-page__title--role">Full Stack Developer @ <a target="_blank" href="https://www.imaginelearning.com/products/science/robotify/">Imagine Robotify</a></h2>
                   <p>I enjoy AI and building things for the web.</p>
                 </div>
                 {/* <div className="home-page__container--picture">
@@ -36,7 +44,14 @@ const HomePage = () =>{
               </div>
               <div className="socials">
                   <Socials />
+                  
               </div>
+              {width<1050 && <div className="arrow--container">
+                <div className="arrow"/>
+                <p className="arrow--text">Scroll Down</p>
+              </div>}
+              
+              
             </div>
             <div className="home-page__container--content-right">
               <AboutMe />
