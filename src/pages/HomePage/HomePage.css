@@ -1,3 +1,7 @@
+@media (prefers-reduced-motion: reduce) {
+    .arrow { animation: none; }
+}
+
 .home-page__container--intro{
     z-index: 30;
 }

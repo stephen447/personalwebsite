@@ -1,6 +1,7 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import React, { useState } from 'react';
+import WelcomeOverlay from './components/WelcomeOverlay/WelcomeOverlay';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -11,7 +12,7 @@ function App() {
   };
   return (
     <div className='app' onMouseMove={handleMouseMove}>
-        <HomePage></HomePage>
+        <WelcomeOverlay><HomePage /></WelcomeOverlay>
         <div
         className="glow"
         style={{ left: mousePosition.x-125, top: mousePosition.y-125 }}
