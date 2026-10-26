@@ -4,6 +4,35 @@
 
 .home-page__container--intro{
     z-index: 30;
+    min-width: 0;
+}
+
+.home-page__intro-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.home-page__portrait {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .home-page__intro-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .home-page__portrait {
+        width: 128px;
+        height: 128px;
+    }
 }
 
 .home-page__container{

@@ -5,6 +5,7 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import "./HomePage.css";
 import Socials from "../../components/Socials/socials";
 import ProjectsHolder from "../../components/ProjectsHolder/ProjectsHolder";
+import portrait from "../../media/Skiing.jpg";
 
 const dublinTime = new Intl.DateTimeFormat("en-IE", {
   timeZone: "Europe/Dublin",
@@ -33,7 +34,14 @@ const HomePage = () => {
     <div className="home-page__container">
       <div className="home-page__container--content">
         <div className="home-page__container--content-left">
-          <div className="test">
+          <div className="home-page__intro-row">
+            <img
+              className="home-page__portrait"
+              src={portrait}
+              alt="Stephen Byrne"
+              width="160"
+              height="160"
+            />
             <div className="home-page__container--intro">
               <h1 className="home-page__title--name">Stephen Byrne</h1>
               <h2 className="home-page__title--role">
@@ -59,9 +67,6 @@ const HomePage = () => {
                 </time>
               </div>
             </div>
-            {/* <div className="home-page__container--picture">
-                  <img className="mainPicture" src={Skiing} />
-                </div> */}
           </div>
           <div className="home-page__navbar">
             <NavBar />
