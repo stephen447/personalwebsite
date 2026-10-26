@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavBar from "../../components/NavBar/navBar";
 import ExperienceHolder from "../../components/ExperienceHolder/ExperienceHolder";
 import AboutMe from "../../components/AboutMe/AboutMe";
@@ -15,6 +15,7 @@ const dublinTime = new Intl.DateTimeFormat("en-IE", {
 });
 
 const HomePage = () => {
+  const portraitDialog = useRef(null);
   const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
@@ -35,13 +36,20 @@ const HomePage = () => {
       <div className="home-page__container--content">
         <div className="home-page__container--content-left">
           <div className="home-page__intro-row">
-            <img
-              className="home-page__portrait"
-              src={portrait}
-              alt="Stephen Byrne"
-              width="160"
-              height="160"
-            />
+            <button
+              className="home-page__portrait-button"
+              aria-label="Enlarge photo of Stephen Byrne"
+              aria-haspopup="dialog"
+              onClick={() => portraitDialog.current.showModal()}
+            >
+              <img
+                className="home-page__portrait"
+                src={portrait}
+                alt="Stephen Byrne"
+                width="160"
+                height="160"
+              />
+            </button>
             <div className="home-page__container--intro">
               <h1 className="home-page__title--name">Stephen Byrne</h1>
               <h2 className="home-page__title--role">
@@ -87,6 +95,23 @@ const HomePage = () => {
           <ExperienceHolder />
         </div>
       </div>
+      <dialog
+        ref={portraitDialog}
+        className="portrait-dialog"
+        aria-label="Photo of Stephen Byrne"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) portraitDialog.current.close();
+        }}
+      >
+        <button
+          className="portrait-dialog__close"
+          aria-label="Close photo"
+          onClick={() => portraitDialog.current.close()}
+        >
+          ×
+        </button>
+        <img className="portrait-dialog__image" src={portrait} alt="Stephen Byrne on a skiing holiday" />
+      </dialog>
     </div>
   );
 };
