@@ -24,7 +24,11 @@ const HomePage = () => {
               <h1 className="home-page__title--name">Stephen Byrne</h1>
               <h2 className="home-page__title--role">
                 Software Engineer @{" "}
-                <a target="_blank" href="https://www.servicenow.com/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.servicenow.com/"
+                >
                   ServiceNow
                 </a>
               </h2>
