@@ -1,44 +1,50 @@
 import React from "react";
 import "./AboutMe.css";
+
 export default function AboutMe() {
   return (
-    <>
-      <div className="about-me" id="about-me">
-        <h1 className="about-me__title">About Me</h1>
-        <p>
-          My name is Stephen Byrne. As a young child I was always facinated with
-          technology and how things worked. Unfortunatly for my parents.. I took
-          a keen interest in the Apple Eco system and enjoyed watching the
-          keynotes by Steve Jobs and later Tim Cook from a young age. I got my
-          first hands on experiece with web development when I completed a 2 day
-          course in DCU while in transistion year and I was instantly hooked. I
-          completed my Masters in Computer and Electronic Engineering at Trinity
-          College Dublin in 2022. I'm currently working at Imagine Robotify as a
-          software developer. I'm passionate about all things web development
-          and Artifital Intelligence.
-        </p>
-        <p>
-          I graduated with a distinction from my Master's in Computer and
-          Electronic Engineering, achieving an average grade of 73%. My master's
-          project focused on machine learning and its implementation in
-          hardware. During my time at Imagine Robotify, I've gained valuable
-          experience in game development and web development. I frequently use
-          React to build interactive and responsive components, ensuring our
-          applications are intuitive and engaging. I'm also hands-on with AWS,
-          deploying applications and managing cloud infrastructure to ensure our
-          projects are scalable and secure. These experiences have equipped me
-          with a strong foundation in both theoretical knowledge and practical
-          skills, enabling me to tackle complex challenges in the field of
-          technology. In my free time Ive developed a full stack web application
-          for buying and selling cars similar to that of CarZone and currently
-          developing a messaging app.
-        </p>
-        <p>
-          When I'm not immersed in writing code, you can find me enjoying the
-          outdoors or following my favorite sports teams. I particularly love
-          playing golf and taking refreshing sea swims during the summer months.
-        </p>
-      </div>
-    </>
+    <div className="about-me" id="about-me">
+      <h1 className="about-me__title">About Me</h1>
+      <p>
+        I’m Stephen Byrne, a software engineer with a love for building things
+        for the web and exploring what AI can do. I currently work at ServiceNow,
+        where I build agentic onboarding experiences that help customers get
+        started faster.
+      </p>
+      <p>
+        My curiosity about technology started early. Unfortunately for my
+        parents, that included a fascination with Apple—I grew up watching Steve
+        Jobs and later Tim Cook introduce whatever I’d inevitably want next. A
+        two-day web development course at DCU during Transition Year gave me my
+        first chance to build something myself, and I was hooked.
+      </p>
+      <p>
+        In 2022, I graduated from Trinity College Dublin with a distinction in my
+        Master’s in Computer and Electronic Engineering. My research focused on
+        detecting attacks in vehicle networks using machine learning and
+        deploying those models on hardware.
+      </p>
+      <p>
+        Before ServiceNow, I worked at Imagine Robotify, developing React
+        applications, backend services, and a browser-based 3D game engine. That
+        experience brought together several things I enjoy: solving technical
+        problems, building interactive experiences, and seeing people use what
+        I’ve made.
+      </p>
+      <p>
+        At ServiceNow, I’ve helped build an onboarding orchestrator that brings
+        together specialised agents from different business units, and helped
+        lead UI development using a new internal framework based on Lit. I enjoy
+        working through both how a system works behind the scenes and how it
+        feels to the person using it.
+      </p>
+      <p>
+        Outside work, I keep experimenting with personal projects, from a
+        full-stack car marketplace to a messaging app and an AI-powered car
+        description generator. Away from the keyboard, you’ll usually find me
+        playing golf, following sport, or making the most of an Irish summer
+        with a sea swim.
+      </p>
+    </div>
   );
 }
