@@ -87,9 +87,14 @@
     
 }
 
+.home-page__location-time {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+}
 
-
-
-
-
-
+.home-page__location-time time {
+    font-variant-numeric: tabular-nums;
+}
