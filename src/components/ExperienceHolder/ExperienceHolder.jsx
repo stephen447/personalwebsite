@@ -2,7 +2,7 @@ import "./ExperienceHolder.css";
 import Experience from "../Experience/Experience";
 const serviceNowDescription = [
   <>
-    Built the core agentic orchestrator for customer onboarding, enabling
+    Helped build the core agentic orchestrator for customer onboarding, enabling
     different business units to integrate their own specialised agents into an
     end-to-end onboarding experience. The solution helped reduce customers’ time
     to first use by <strong>30%</strong>.
