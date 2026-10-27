@@ -1,24 +1,78 @@
-.social{
-    display: flex;
-    border-radius: 20px; 
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 12px 16px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 10px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
-.socialElement{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    
+
+.socialElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  transition: transform 180ms ease-out;
 }
-.socialIcons:hover{
-    transform: scale(1.2);
-    transition: transform 0.3s ease
+
+.socialElement:hover,
+.socialElement:focus-within {
+  transform: translateY(-8px) scale(1.12);
 }
-.socialIcons{
-    width: 50%;
-    margin: 7%;
-    min-width: 35px;
+
+.socialElement a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out;
+}
+
+.socialElement a:hover,
+.socialElement a:focus-visible {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 10px 22px rgba(0, 0, 0, 0.24);
+}
+
+.socialIcons {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 420px) {
+  .social {
+    gap: 8px;
+    padding: 10px 12px 8px;
+  }
+
+  .socialElement a {
+    width: 46px;
+    height: 46px;
+  }
+
+  .socialIcons {
+    width: 26px;
+    height: 26px;
+  }
 }
