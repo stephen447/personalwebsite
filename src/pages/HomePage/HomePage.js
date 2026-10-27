@@ -6,6 +6,7 @@ import "./HomePage.css";
 import Socials from "../../components/Socials/socials";
 import ProjectsHolder from "../../components/ProjectsHolder/ProjectsHolder";
 import portrait from "../../media/Skiing.jpg";
+import DublinGlobe from "../../components/DublinGlobe/DublinGlobe";
 
 const dublinTime = new Intl.DateTimeFormat("en-IE", {
   timeZone: "Europe/Dublin",
@@ -77,6 +78,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="home-page__navbar">
+            <DublinGlobe />
             <NavBar />
           </div>
           <div className="socials">
@@ -100,7 +102,8 @@ const HomePage = () => {
         className="portrait-dialog"
         aria-label="Photo of Stephen Byrne"
         onClick={(event) => {
-          if (event.target === event.currentTarget) portraitDialog.current.close();
+          if (event.target === event.currentTarget)
+            portraitDialog.current.close();
         }}
       >
         <button
@@ -110,7 +113,11 @@ const HomePage = () => {
         >
           ×
         </button>
-        <img className="portrait-dialog__image" src={portrait} alt="Stephen Byrne on a skiing holiday" />
+        <img
+          className="portrait-dialog__image"
+          src={portrait}
+          alt="Stephen Byrne on a skiing holiday"
+        />
       </dialog>
     </div>
   );

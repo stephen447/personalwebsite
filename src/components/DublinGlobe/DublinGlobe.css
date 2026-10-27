@@ -1,0 +1,52 @@
+.dublin-globe {
+  width: clamp(160px, 19vw, 250px);
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.dublin-globe__canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  cursor: grab;
+  touch-action: none;
+  border-radius: 50%;
+}
+.dublin-globe__canvas:active { cursor: grabbing; }
+.dublin-globe__canvas:focus-visible,
+.dublin-globe__reset:focus-visible {
+  outline: 2px solid #a0ffc0;
+  outline-offset: 3px;
+}
+.dublin-globe__reset {
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: #e3e0e0;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.dublin-globe__reset span { color: #a0ffc0; margin-right: 5px; }
+.dublin-globe__hint { display: block; font-size: 10px; color: #a6adb9; }
+.dublin-globe__scene { position: relative; }
+.dublin-globe__label {
+  position: absolute;
+  transform: translate(9px, -50%);
+  color: #f5f1e9;
+  font-size: 11px;
+  text-shadow: 0 1px 4px #000, 0 0 6px #000;
+  pointer-events: none;
+}
+.dublin-globe__loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #101226;
+  color: #a6adb9;
+  font-size: 12px;
+  border-radius: 50%;
+  pointer-events: none;
+}
