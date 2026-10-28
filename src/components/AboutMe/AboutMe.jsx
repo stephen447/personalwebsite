@@ -11,10 +11,12 @@ export default function AboutMe() {
     <div className="about-me" id="about-me">
       <h1 className="about-me__title">Dia Duit, I'm Stephen</h1>
       <p>
-        I’m Stephen Byrne, a software engineer with a love for building things
-        for the web and exploring what AI can do. I currently work at
-        ServiceNow, where I build agentic onboarding experiences that help
-        customers get started faster.
+        I’m Stephen Byrne, a software engineer who loves building for the web
+        and exploring what AI can do. I currently work within Impact at
+        ServiceNow, helping customers maximise their value from the platform.
+        I’ve helped build a new offering from the ground up, contributing to
+        both the agentic configuration orchestrator and the UI console that
+        guides customers through the configuration process.
       </p>
       <p>
         My curiosity about technology started early. Unfortunately for my
@@ -41,11 +43,12 @@ export default function AboutMe() {
       </div>
       <div className="about-me__robotify">
         <p>
-          Before ServiceNow, I worked at Imagine Robotify, developing React
-          applications, backend services, and a browser-based 3D game engine.
-          That experience brought together several things I enjoy: solving
-          technical problems, building interactive experiences, and seeing
-          people use what I’ve made.
+          Before ServiceNow, I worked at Imagine Robotify, building interactive
+          educational games for primary school students. I developed React
+          applications, backend services, and contributed to a browser-based 3D
+          game engine. The role brought together several things I enjoy: solving
+          technical problems, creating engaging experiences, and working with
+          new technology.
         </p>
         <img
           className="about-me__robotify-image"
@@ -56,11 +59,13 @@ export default function AboutMe() {
       </div>
       <div className="about-me__split about-me__servicenow">
         <p>
-          At ServiceNow, I’ve helped build an onboarding orchestrator that
-          brings together specialised agents from different business units, and
-          helped lead UI development using a new internal framework based on
-          Lit. I enjoy working through both how a system works behind the scenes
-          and how it feels to the person using it.
+          At ServiceNow, I’ve helped build an agent orchestrator that enables
+          teams across business units to integrate specialised agents for
+          configuring their products. I’ve also helped lead development of the
+          second-generation UI using a new internal framework built on Lit. I’ve
+          thoroughly enjoyed my first professional experience building agentic
+          systems, tackling the challenges they introduce, and exploring the
+          opportunities that come with working at ServiceNow’s global scale.
         </p>
         <img
           className="about-me__servicenow-logo"
@@ -70,11 +75,10 @@ export default function AboutMe() {
         />
       </div>
       <p>
-        Outside work, I keep experimenting with personal projects, from a
-        full-stack car marketplace to a messaging app and an AI-powered car
-        description generator. Away from the keyboard, you’ll usually find me
-        playing golf, following sport, or making the most of an Irish summer
-        with a sea swim.
+        Outside work, I enjoy experimenting with personal projects, learning new
+        technologies, and building on my skills. Away from the keyboard, you’ll
+        usually find me playing or following sport, catching up with friends, or
+        getting outdoors.
       </p>
 
       <div
