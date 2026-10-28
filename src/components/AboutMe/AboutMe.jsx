@@ -20,10 +20,10 @@ export default function AboutMe() {
       </p>
       <p>
         My curiosity about technology started early. Unfortunately for my
-        parents, that included a fascination with Apple—I grew up watching Steve
-        Jobs and later Tim Cook introduce whatever I’d inevitably want next. A
-        two-day web development course at DCU during Transition Year gave me my
-        first chance to build something myself, and I was hooked.
+        parents, that included a fascination with Apple - I grew up watching
+        Steve Jobs and later Tim Cook introduce whatever I’d inevitably want
+        next. A two-day web development course at DCU during Transition Year
+        gave me my first chance to build something myself, and I was hooked.
       </p>
       <div className="about-me__split about-me__graduation">
         <p>

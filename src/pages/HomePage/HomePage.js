@@ -93,8 +93,8 @@ const HomePage = () => {
         </div>
         <div className="home-page__container--content-right">
           <AboutMe />
-          <ProjectsHolder />
           <ExperienceHolder />
+          <ProjectsHolder />
         </div>
       </div>
       <dialog
