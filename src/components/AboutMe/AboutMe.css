@@ -1,9 +1,147 @@
-.about-me{
-    overflow: auto;
-    z-index: 20;
-    border-radius: 10px;
-    margin: 0%;
+.about-me {
+  overflow: auto;
+  z-index: 20;
+  border-radius: 10px;
+  margin: 0%;
+  text-align: left;
 }
-.about-me__title{
-    z-index: 40;
+
+.about-me__title {
+  z-index: 40;
+  text-align: center;
+}
+
+.about-me__photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.about-me__photo {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.about-me__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.about-me__photo figcaption {
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.85rem;
+}
+
+.about-me__split {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 28px 0;
+}
+
+.about-me__split > p {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-me__graduation {
+  text-align: left;
+}
+
+.about-me__graduation-photo {
+  flex: 0 0 38%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.about-me__graduation-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.about-me__graduation-photo figcaption {
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.85rem;
+}
+
+.about-me__servicenow-logo {
+  display: block;
+  flex: 0 0 112px;
+  width: 112px;
+  height: 112px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.about-me__robotify {
+  margin: 28px 0;
+}
+
+.about-me__robotify-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 16px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 480px) {
+  .about-me__photos {
+    gap: 10px;
+  }
+
+  .about-me__split {
+    gap: 12px;
+  }
+
+  .about-me__graduation {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .about-me__graduation-photo {
+    flex-basis: auto;
+  }
+
+  .about-me__servicenow-logo {
+    flex-basis: 76px;
+    width: 76px;
+    height: 76px;
+    border-radius: 12px;
+  }
+
+  .about-me__photo figcaption {
+    padding: 7px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-me__servicenow {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
