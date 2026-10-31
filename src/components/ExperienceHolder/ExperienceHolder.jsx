@@ -1,5 +1,7 @@
 import "./ExperienceHolder.css";
 import Experience from "../Experience/Experience";
+import ServiceNowLogo from "../../media/Servicenow.png";
+import RobotifyLogo from "../../media/Robotify Logo.png";
 const serviceNowDescription = [
   <>
     Helped build the core agentic orchestrator for customer onboarding, enabling
@@ -26,6 +28,7 @@ export default function ExperienceHolder() {
         title="Software Engineer"
         company="ServiceNow"
         url="https://www.servicenow.com/"
+        logo={ServiceNowLogo}
         year="June 2025 - Present"
         description={serviceNowDescription}
       />
@@ -33,6 +36,8 @@ export default function ExperienceHolder() {
         title="Junior Software Developer"
         company="Imagine Robotify"
         url="https://www.imaginelearning.com/products/science/robotify/"
+        logo={RobotifyLogo}
+        logoVariant="wordmark"
         year="July 2023 - June 2025"
         description={imagineLearningDescription}
       />
