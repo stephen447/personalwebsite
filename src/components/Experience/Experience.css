@@ -45,6 +45,40 @@
   font-size: 0.9rem;
 }
 
+.experience__description > p {
+  margin: 0 0 12px;
+}
+
+.experience__description > p:last-child {
+  margin-bottom: 0;
+}
+
+.experience__description.is-collapsed .experience__description-preview {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.experience__description-toggle,
+.experience__skills-toggle {
+  padding: 2px 6px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.experience__description-toggle {
+  display: block;
+  margin: 10px auto 0;
+}
+
 .experience__skills {
   display: flex;
   flex-direction: column;
@@ -86,18 +120,7 @@
   line-height: 1.4;
 }
 
-.experience__skills-toggle {
-  padding: 2px 6px;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: 0.8rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  cursor: pointer;
-}
-
+.experience__description-toggle:focus-visible,
 .experience__skills-toggle:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;

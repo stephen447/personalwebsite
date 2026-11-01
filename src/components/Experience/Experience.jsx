@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import "./Experience.css";
 
 const VISIBLE_SKILL_COUNT = 6;
@@ -12,7 +12,9 @@ export default function Experience({
   description = [],
   skillCategories = [],
 }) {
+  const [descriptionExpanded, setDescriptionExpanded] = useState(false);
   const [skillsExpanded, setSkillsExpanded] = useState(false);
+  const descriptionId = useId();
   const totalSkills = skillCategories.reduce(
     (total, category) => total + category.skills.length,
     0,
@@ -66,14 +68,34 @@ export default function Experience({
         ))}
       </div>
 
-      {description.map((paragraph, index) => (
-        <p
-          className={index === 0 ? "experience__description" : undefined}
-          key={index}
+      {description.length > 0 && (
+        <div
+          className={`experience__description${descriptionExpanded ? " is-expanded" : " is-collapsed"}`}
+          id={descriptionId}
         >
-          {paragraph}
-        </p>
-      ))}
+          {(descriptionExpanded ? description : description.slice(0, 1)).map(
+            (paragraph, index) => (
+              <p
+                className={index === 0 ? "experience__description-preview" : undefined}
+                key={index}
+              >
+                {paragraph}
+              </p>
+            ),
+          )}
+        </div>
+      )}
+      {description.length > 0 && (
+        <button
+          className="experience__description-toggle"
+          type="button"
+          aria-expanded={descriptionExpanded}
+          aria-controls={descriptionId}
+          onClick={() => setDescriptionExpanded((expanded) => !expanded)}
+        >
+          {descriptionExpanded ? "Show less" : "Read more"}
+        </button>
+      )}
 
       {totalSkills > 0 && (
         <div className="experience__skills">
