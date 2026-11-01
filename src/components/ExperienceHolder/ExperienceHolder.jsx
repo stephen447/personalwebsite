@@ -11,11 +11,11 @@ const serviceNowDescription = [
 ];
 
 const imagineLearningDescription = [
-  "At Imagine Robotify, I am part of an agile team dedicated to developing cutting-edge web applications and web-based game engines. My role encompasses the entire project lifecycle, including planning, development, deployment, and maintenance.",
-  "I craft dynamic and responsive React components to enhance the user interface and overall user experience. Additionally, I engineer RESTful APIs using Express.js to facilitate seamless and scalable communication between the server, clients and various AWS services.",
-  "A key aspect of my work involves helping to develop a 3D browser-based game engine utilizing THREE.js and Cannon ES with an Entity-Component-System (ECS) architecture, which allows for efficient game design and development.",
-  "I execute comprehensive unit, integration, and end-to-end testing using Cypress and Jest to ensure our applications are of the highest quality and reliability. Furthermore, I use Docker to streamline the deployment of services, ensuring consistent and reliable application updates.",
-  "To uphold code quality and adhere to best practices, I conduct thorough code reviews for my peers.",
+  "At Imagine Robotify, I was part of an agile team dedicated to developing cutting-edge web applications and web-based game engines. My role encompassed the entire project lifecycle, including planning, development, deployment, and maintenance.",
+  "I crafted dynamic and responsive React components to enhance the user interface and overall user experience. Additionally, I engineered RESTful APIs using Express.js to facilitate seamless and scalable communication between the server, clients, and various AWS services.",
+  "A key aspect of my work involved helping to develop a 3D browser-based game engine using THREE.js and Cannon ES with an Entity-Component-System (ECS) architecture, which supported efficient game design and development.",
+  "I carried out comprehensive unit, integration, and end-to-end testing using Cypress and Jest to ensure application quality and reliability. I also used Docker to streamline service deployment, supporting consistent and reliable application updates.",
+  "To uphold code quality and best practices, I conducted thorough code reviews for my peers.",
 ];
 export default function ExperienceHolder() {
   return (
@@ -90,22 +90,29 @@ export default function ExperienceHolder() {
         description={imagineLearningDescription}
         skillCategories={[
           {
-            name: "Frontend & 3D",
+            name: "Frontend",
             skills: [
+              "UI Development",
               "React",
-              "THREE.js",
+              "Three.js",
               "Cannon ES",
-              "Entity-Component-System",
-              "Game engine development",
+              "3D Game Engine Development",
             ],
           },
           {
-            name: "Backend & cloud",
-            skills: ["Express.js", "REST APIs", "AWS"],
+            name: "Backend",
+            skills: ["API Development", "REST APIs", "Express", "AWS"],
           },
           {
-            name: "Testing & delivery",
-            skills: ["Cypress", "Jest", "Docker", "Code reviews"],
+            name: "Testing & Quality",
+            skills: [
+              "Unit Testing",
+              "Integration Testing",
+              "End-to-End Testing",
+              "Cypress",
+              "Jest",
+              "Code Reviews",
+            ],
           },
         ]}
       />
