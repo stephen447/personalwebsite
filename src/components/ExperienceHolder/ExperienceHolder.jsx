@@ -25,20 +25,29 @@ export default function ExperienceHolder() {
     <div className="experienceholder__container" id="experience__container">
       <h1>Experience</h1>
       <Experience
-        title="Software Engineer"
         company="ServiceNow"
         url="https://www.servicenow.com/"
         logo={ServiceNowLogo}
-        year="June 2025 - Present"
+        roles={[
+          { title: "Software Engineer", timeframe: "June 2025 - Present" },
+        ]}
         description={serviceNowDescription}
       />
       <Experience
-        title="Junior Software Developer"
         company="Imagine Robotify"
         url="https://www.imaginelearning.com/products/science/robotify/"
         logo={RobotifyLogo}
         logoVariant="wordmark"
-        year="July 2023 - June 2025"
+        roles={[
+          {
+            title: "Software Developer",
+            timeframe: "January 2025 - June 2025",
+          },
+          {
+            title: "Junior Software Developer",
+            timeframe: "July 2023 - January 2025",
+          },
+        ]}
         description={imagineLearningDescription}
       />
     </div>

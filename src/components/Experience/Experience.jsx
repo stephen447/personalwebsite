@@ -1,12 +1,11 @@
 import "./Experience.css";
 
 export default function Experience({
-  title,
   company,
   url,
   logo,
   logoVariant,
-  year,
+  roles = [],
   description = [],
 }) {
   return (
@@ -20,14 +19,26 @@ export default function Experience({
           />
         )}
 
-        <h2 className="experience__title">
-          {title} @{" "}
+        <h2 className="experience__company">
           <a target="_blank" href={url} rel="noopener noreferrer">
             {company}
           </a>
         </h2>
       </div>
-      <p className="experience__year">{year}</p>
+      <div className="experience__roles">
+        {roles.map((role) => {
+          const roleKey = `${role.title}-${role.timeframe}`;
+          return (
+            <div className="experience__role" key={roleKey}>
+              <h3 className="experience__role-title">{role.title}</h3>
+              <span className="experience__role-timeframe">
+                {role.timeframe}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
       {description.map((paragraph, index) => (
         <p
           className={index === 0 ? "experience__description" : undefined}

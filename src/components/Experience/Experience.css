@@ -16,6 +16,33 @@
   gap: 16px;
 }
 
+.experience__roles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 16px;
+}
+
+.experience__role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px 10px;
+  text-align: center;
+}
+
+.experience__role-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.experience__role-timeframe {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
 .experience__logo {
   display: block;
   flex: 0 0 auto;
