@@ -1,34 +1,80 @@
-.project__container:hover{
-    background-color: rgba(255, 255, 255, 0.052);
-    border-radius: 10px;
-    z-index: 20;
-}
-.project__container{
-    z-index: 20;
-    padding: 10px;
-}
-.title__container{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-
-    
-}
-.project__link{
-    width: 25px;
-    margin-left: 2%;
-    height: 25px;
-    align-items: center;
-    justify-content: center;
-}
-.project__image--link:hover{
-    transform: scale(1.2);
-    transition: ease 0.3s;
+.project__card-link {
+  display: block;
+  margin-bottom: 18px;
+  color: inherit;
+  text-decoration: none;
 }
 
-.project__image--link{
-    width: 100%;
-    
-    
+.project__container {
+  z-index: 20;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.025)
+  );
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.project__container:hover,
+.project__card-link:hover .project__container,
+.project__card-link:focus-visible .project__container {
+  border-color: rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.07);
+  transform: translateY(-2px);
+}
+
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.project__title {
+  margin: 0;
+}
+
+.project__external-link {
+  display: flex;
+  flex: 0 0 25px;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+}
+
+.project__image--link {
+  display: block;
+  width: 100%;
+  transition: transform 180ms ease;
+}
+
+.project__card-link:hover .project__image--link {
+  transform: scale(1.12);
+}
+
+@media (max-width: 480px) {
+  .project__container {
+    padding: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project__container,
+  .project__image--link {
+    transition: none;
+  }
+
+  .project__container:hover,
+  .project__card-link:hover .project__container,
+  .project__card-link:focus-visible .project__container {
+    transform: none;
+  }
 }

@@ -10,8 +10,8 @@ export default function Project(props) {
             <div className="title__container">
                 <h2 className="project__title">{title}</h2>
                 {url && (
-                    <div className="project__link">
-                        <img  className="project__image--link" src={linkIcon}/>
+                    <div className="project__external-link">
+                        <img alt="" className="project__image--link" src={linkIcon}/>
                 </div>)}
 
             </div>
@@ -28,7 +28,7 @@ export default function Project(props) {
     );
 
     return url ? (
-        <a href={url} target="_blank" rel="noopener noreferrer" className="project__link">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="project__card-link">
             {projectContent}
         </a>
     ) : (
