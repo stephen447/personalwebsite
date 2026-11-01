@@ -1,0 +1,10 @@
+.projects-holder__title {
+  width: fit-content;
+  margin: 0 auto 24px;
+  padding: 0 0 10px;
+  border-bottom: 2px solid rgba(111, 226, 84, 0.75);
+  color: #f5f1e9;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.2;
+  text-align: center;
+}
