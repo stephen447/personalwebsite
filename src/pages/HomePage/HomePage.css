@@ -145,32 +145,54 @@
   }
 }
 .arrow--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   width: 100%;
-  height: auto;
-  text-align: center;
+  margin-top: auto;
+  padding: 18px 0 8px;
+  color: rgba(245, 241, 233, 0.72);
 }
 .arrow {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 15px solid rgb(255, 255, 255); /* Arrow color */
-  margin: 0 auto; /* Center the arrow */
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid currentColor;
   animation: bounce 1s infinite ease-in-out;
 }
 .arrow--text {
-  width: 100%;
-  text-align: center;
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-/* Animation for bouncing effect */
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 600px) {
+  .arrow--container {
+    gap: 4px;
+    padding-top: 12px;
+  }
+
+  .arrow {
+    border-left-width: 7px;
+    border-right-width: 7px;
+    border-top-width: 9px;
+  }
+
+  .arrow--text {
+    font-size: 0.7rem;
   }
 }
 
