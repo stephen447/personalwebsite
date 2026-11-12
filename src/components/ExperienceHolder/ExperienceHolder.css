@@ -3,7 +3,8 @@
   padding: 8px 0 24px;
 }
 
-.experienceholder__title {
+.experienceholder__title,
+.experienceholder__section-title {
   width: fit-content;
   margin: 0 auto 24px;
   padding: 0 0 10px;
@@ -12,6 +13,64 @@
   font-size: clamp(1.6rem, 3vw, 2rem);
   line-height: 1.2;
   text-align: center;
+}
+
+.experienceholder__section-title {
+  margin-top: 28px;
+  font-size: 1.35rem;
+}
+
+.experienceholder__recognition-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experienceholder__recognition-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.025)
+  );
+}
+
+.experienceholder__recognition-name {
+  color: #f5f1e9;
+  font-weight: 600;
+}
+
+.experienceholder__recognition-issuer {
+  margin: 0;
+  color: rgba(245, 241, 233, 0.72);
+  font-size: 0.9rem;
+}
+
+.experienceholder__certificate-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.experienceholder__certificate-download {
+  width: fit-content;
+  margin-top: 6px;
+  color: #a0ffc0;
+  font-size: 0.9rem;
+  text-underline-offset: 3px;
+}
+
+.experienceholder__certificate-download:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 
 .experienceholder__container > .experience__container {
