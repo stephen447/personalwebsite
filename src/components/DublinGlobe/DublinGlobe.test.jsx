@@ -1,4 +1,10 @@
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from '@testing-library/react';
 import DublinGlobe from './DublinGlobe';
 import { createGlobe } from './createGlobe';
 
@@ -22,7 +28,9 @@ test('connects controls and disposes the renderer when unmounted', async () => {
 });
 
 test('shows an unavailable message when WebGL is unavailable', async () => {
-  createGlobe.mockImplementation(() => { throw new Error('WebGL unavailable'); });
+  createGlobe.mockImplementation(() => {
+    throw new Error('WebGL unavailable');
+  });
   render(<DublinGlobe />);
   expect(await screen.findByRole('status')).toBeInTheDocument();
 });

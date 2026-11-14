@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run format`
+
+Formats project files with Prettier. Generated output, dependencies, coverage, and the npm lockfile are excluded.
+
+### `npm run format:check`
+
+Checks formatting without changing files.
+
 ### `npm start`
 
 Runs the app in the development mode.\

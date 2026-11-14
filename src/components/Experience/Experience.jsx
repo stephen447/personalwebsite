@@ -1,5 +1,5 @@
-import { useId, useState } from "react";
-import "./Experience.css";
+import { useId, useState } from 'react';
+import './Experience.css';
 
 const VISIBLE_SKILL_COUNT = 6;
 
@@ -44,7 +44,7 @@ export default function Experience({
       <div className="experience__header">
         {logo && (
           <img
-            className={`experience__logo${logoVariant ? ` experience__logo--${logoVariant}` : ""}`}
+            className={`experience__logo${logoVariant ? ` experience__logo--${logoVariant}` : ''}`}
             src={logo}
             alt={`${company} logo`}
           />
@@ -70,13 +70,15 @@ export default function Experience({
 
       {description.length > 0 && (
         <div
-          className={`experience__description${descriptionExpanded ? " is-expanded" : " is-collapsed"}`}
+          className={`experience__description${descriptionExpanded ? ' is-expanded' : ' is-collapsed'}`}
           id={descriptionId}
         >
           {(descriptionExpanded ? description : description.slice(0, 1)).map(
             (paragraph, index) => (
               <p
-                className={index === 0 ? "experience__description-preview" : undefined}
+                className={
+                  index === 0 ? 'experience__description-preview' : undefined
+                }
                 key={index}
               >
                 {paragraph}
@@ -93,7 +95,7 @@ export default function Experience({
           aria-controls={descriptionId}
           onClick={() => setDescriptionExpanded((expanded) => !expanded)}
         >
-          {descriptionExpanded ? "Show less" : "Read more"}
+          {descriptionExpanded ? 'Show less' : 'Read more'}
         </button>
       )}
 
@@ -124,7 +126,7 @@ export default function Experience({
               aria-expanded={skillsExpanded}
               onClick={() => setSkillsExpanded((expanded) => !expanded)}
             >
-              {skillsExpanded ? "Show less" : `Show all ${totalSkills} skills`}
+              {skillsExpanded ? 'Show less' : `Show all ${totalSkills} skills`}
             </button>
           )}
         </div>

@@ -1,5 +1,5 @@
-import React from "react";
-import "./navBar.css";
+import React from 'react';
+import './navBar.css';
 export default function NavBar() {
   /**
    * This function scrolls to the section of the page that matches the target ID
@@ -7,9 +7,9 @@ export default function NavBar() {
    */
   function scrollToSection(event) {
     event.preventDefault();
-    const targetId = event.target.getAttribute("href").slice(1); // Get the target section ID
+    const targetId = event.target.getAttribute('href').slice(1); // Get the target section ID
     const targetSection = document.getElementById(targetId);
-    targetSection.scrollIntoView({ behavior: "smooth" });
+    targetSection.scrollIntoView({ behavior: 'smooth' });
   }
   return (
     <>

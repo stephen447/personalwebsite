@@ -11,14 +11,18 @@ function App() {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
   return (
-    <div className='app' onMouseMove={handleMouseMove}>
-        <WelcomeOverlay><HomePage /></WelcomeOverlay>
-        <div
+    <div className="app" onMouseMove={handleMouseMove}>
+      <WelcomeOverlay>
+        <HomePage />
+      </WelcomeOverlay>
+      <div
         className="glow"
-        style={{ left: mousePosition.x-125, top: mousePosition.y-125 }}
+        style={{
+          left: mousePosition.x - 125,
+          top: mousePosition.y - 125,
+        }}
       ></div>
     </div>
-
   );
 }
 

@@ -1,19 +1,72 @@
-import "./ProjectsHolder.css"
-import Project from "../Project/project"
-export default function ProjectsHolder () {
-    const description1 = "The project's goal was to use machine learning to create an intrusion detection systems (IDS) for vehicular networks and deploy the model on hardware. The project was broke down into different phases. Dataset Selection and Model Training: Datasets were researched to train the models. I decided on a dataset which had never been used for research before. Utilizing Convolutional Neural Network (CNN), models were created and fine-tuned to detect various network attacks, including Targeted ID attacks and Fuzzing attacks. Hardware Selection and Model Deployment: An FPGA was chosen for deploying the models as it was the best compromise between performance and power consumption. Following this, the trained models were quantized, demonstrating minimal performance impact post-quantization. Subsequently, the models were successfully implemented on an Ultra 96 board using Vitis-AI, which could be then added to a vehicles CANBUS without drawing excessive power. Performance Optimization and Analysis: To achieve optimal performance, latency and power consumption across different DPU’s were recorded and analysed. This analysis enabled the optimal compromise between performance and resource utilization."
-    const description2 = "Full stack car advertising application inspired by platforms like CarZone. This project enables users to register accounts, log in, manage their profiles and advertisements, create detailed adverts with image uploads, and view all advertisements created by users. The backend is powered by Django, selected for its robust ORM, which streamlines database interactions. PostgreSQL is utilized for efficient storage and retrieval of user profiles and advert data, ensuring the application's scalability and reliability. On the frontend, I employed React's component-based architecture to create a responsive and user-friendly interface, significantly enhancing the overall user experience."
-    
-    const description4 = "I developed a web messaging application using React to build a scalable and dynamic user interface. The backend API was built using Node.js and an Express server, which interfaces with a PostgreSQL database to manage and store user data and messages. The application features a user login system, message sending functionality, online status indicators, and a switchable light/dark theme, creating a responsive and user-friendly messaging platform. In time I plan to implement multimedia messaging, group chats, read receipts and user creation."
-    const description5 = "I developed a web application that enables users to input car details and automatically generates a professional description for selling the vehicle. I integrated the OpenAI API for generating high-quality descriptions and built a scalable, interactive user interface using React and Tailwind CSS. Additionally, I implemented a CI process using GitHub Actions to streamline development, and deployed the application on Render’s free tier, ensuring a smooth and efficient deployment workflow."
-    return(
-        <div className="projects-holder__container" id="project__container">
-            <h1 className="projects-holder__title">Projects</h1>
-            <Project title="Car Advertising App" url="https://car-advertising-app-1.onrender.com"year="2024" description={description2} techStack={["React", "Django", "PostgreSQL", "JavaScript", "CSS", "Docker"]} />
-            <Project title="Messaging App" url="https://messaging-app-m9gy.onrender.com/"year="2024" description={description4} techStack={["React", "Node JS", "PostgreSQL", "JavaScript", "CSS", "Web Sockets"]} />
-            <Project title="AI Car Description Generator" url="https://car-descriptions-ai.onrender.com/" year="2024" description={description5} techStack={["React", "OpenAI API", "JavaScript", "Tailwind CSS", "GitHub Actions", "Render"]} />
-            <Project title="Masters Project" year="2021-2022" description={description1} techStack={["Machine Learning", "Deep Learning", "Python", "TensorFlow", "Vitis AI" ]} /> 
-            </div>
-    )
-    
+import './ProjectsHolder.css';
+import Project from '../Project/project';
+export default function ProjectsHolder() {
+  const description1 =
+    "The project's goal was to use machine learning to create an intrusion detection systems (IDS) for vehicular networks and deploy the model on hardware. The project was broke down into different phases. Dataset Selection and Model Training: Datasets were researched to train the models. I decided on a dataset which had never been used for research before. Utilizing Convolutional Neural Network (CNN), models were created and fine-tuned to detect various network attacks, including Targeted ID attacks and Fuzzing attacks. Hardware Selection and Model Deployment: An FPGA was chosen for deploying the models as it was the best compromise between performance and power consumption. Following this, the trained models were quantized, demonstrating minimal performance impact post-quantization. Subsequently, the models were successfully implemented on an Ultra 96 board using Vitis-AI, which could be then added to a vehicles CANBUS without drawing excessive power. Performance Optimization and Analysis: To achieve optimal performance, latency and power consumption across different DPU’s were recorded and analysed. This analysis enabled the optimal compromise between performance and resource utilization.";
+  const description2 =
+    "Full stack car advertising application inspired by platforms like CarZone. This project enables users to register accounts, log in, manage their profiles and advertisements, create detailed adverts with image uploads, and view all advertisements created by users. The backend is powered by Django, selected for its robust ORM, which streamlines database interactions. PostgreSQL is utilized for efficient storage and retrieval of user profiles and advert data, ensuring the application's scalability and reliability. On the frontend, I employed React's component-based architecture to create a responsive and user-friendly interface, significantly enhancing the overall user experience.";
+
+  const description4 =
+    'I developed a web messaging application using React to build a scalable and dynamic user interface. The backend API was built using Node.js and an Express server, which interfaces with a PostgreSQL database to manage and store user data and messages. The application features a user login system, message sending functionality, online status indicators, and a switchable light/dark theme, creating a responsive and user-friendly messaging platform. In time I plan to implement multimedia messaging, group chats, read receipts and user creation.';
+  const description5 =
+    'I developed a web application that enables users to input car details and automatically generates a professional description for selling the vehicle. I integrated the OpenAI API for generating high-quality descriptions and built a scalable, interactive user interface using React and Tailwind CSS. Additionally, I implemented a CI process using GitHub Actions to streamline development, and deployed the application on Render’s free tier, ensuring a smooth and efficient deployment workflow.';
+  return (
+    <div className="projects-holder__container" id="project__container">
+      <h1 className="projects-holder__title">Projects</h1>
+      <Project
+        title="Car Advertising App"
+        url="https://car-advertising-app-1.onrender.com"
+        year="2024"
+        description={description2}
+        techStack={[
+          'React',
+          'Django',
+          'PostgreSQL',
+          'JavaScript',
+          'CSS',
+          'Docker',
+        ]}
+      />
+      <Project
+        title="Messaging App"
+        url="https://messaging-app-m9gy.onrender.com/"
+        year="2024"
+        description={description4}
+        techStack={[
+          'React',
+          'Node JS',
+          'PostgreSQL',
+          'JavaScript',
+          'CSS',
+          'Web Sockets',
+        ]}
+      />
+      <Project
+        title="AI Car Description Generator"
+        url="https://car-descriptions-ai.onrender.com/"
+        year="2024"
+        description={description5}
+        techStack={[
+          'React',
+          'OpenAI API',
+          'JavaScript',
+          'Tailwind CSS',
+          'GitHub Actions',
+          'Render',
+        ]}
+      />
+      <Project
+        title="Masters Project"
+        year="2021-2022"
+        description={description1}
+        techStack={[
+          'Machine Learning',
+          'Deep Learning',
+          'Python',
+          'TensorFlow',
+          'Vitis AI',
+        ]}
+      />
+    </div>
+  );
 }

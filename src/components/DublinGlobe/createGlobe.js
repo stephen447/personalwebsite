@@ -1,6 +1,6 @@
-import * as THREE from "three";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import earthImage from "./earth.jpg";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import earthImage from './earth.jpg';
 const DUBLIN = [-6.2603, 53.3498];
 const HOME_VIEW = { longitude: -18, latitude: 35 };
 
@@ -145,7 +145,7 @@ export function createGlobe(canvas, label, onReady, onError) {
     label.style.left = `${(point.x + 1) * 50}%`;
     label.style.top = `${(1 - point.y) * 50}%`;
   };
-  orbit.addEventListener("change", render);
+  orbit.addEventListener('change', render);
   /**
    * Match the drawing buffer to the square canvas without changing its CSS size.
    * Use a 250px width when layout has not provided a measurable width, then redraw.
@@ -203,7 +203,7 @@ export function createGlobe(canvas, label, onReady, onError) {
     dispose();
     onError();
   };
-  canvas.addEventListener("webglcontextlost", onContextLost);
+  canvas.addEventListener('webglcontextlost', onContextLost);
   resize();
 
   /**
@@ -216,7 +216,7 @@ export function createGlobe(canvas, label, onReady, onError) {
     disposed = true;
     observer.disconnect();
     orbit.dispose();
-    canvas.removeEventListener("webglcontextlost", onContextLost);
+    canvas.removeEventListener('webglcontextlost', onContextLost);
     texture.dispose();
     sphere.dispose();
     material.dispose();
@@ -241,7 +241,7 @@ export function createGlobe(canvas, label, onReady, onError) {
      * @returns {void}
      */
     key: (key) => {
-      if (key === "Home") {
+      if (key === 'Home') {
         orbit.reset();
         return;
       }

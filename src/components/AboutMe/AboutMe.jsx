@@ -1,10 +1,10 @@
-import React from "react";
-import friendsPhoto from "../../media/Me+Friends.JPG";
-import skiingPhoto from "../../media/Me Skiing.jpg";
-import graduationPhoto from "../../media/Graduation.JPG";
-import ServiceNowLogo from "../../media/Servicenow.png";
-import RobotifyImage from "../../media/Robotify.jpeg";
-import "./AboutMe.css";
+import React from 'react';
+import friendsPhoto from '../../media/Me+Friends.JPG';
+import skiingPhoto from '../../media/Me Skiing.jpg';
+import graduationPhoto from '../../media/Graduation.JPG';
+import ServiceNowLogo from '../../media/Servicenow.png';
+import RobotifyImage from '../../media/Robotify.jpeg';
+import './AboutMe.css';
 
 export default function AboutMe() {
   return (

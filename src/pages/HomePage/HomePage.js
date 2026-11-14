@@ -1,17 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-import NavBar from "../../components/NavBar/navBar";
-import ExperienceHolder from "../../components/ExperienceHolder/ExperienceHolder";
-import AboutMe from "../../components/AboutMe/AboutMe";
-import "./HomePage.css";
-import Socials from "../../components/Socials/socials";
-import ProjectsHolder from "../../components/ProjectsHolder/ProjectsHolder";
-import portrait from "../../media/Skiing.jpg";
-import DublinGlobe from "../../components/DublinGlobe/DublinGlobe";
+import React, { useEffect, useRef, useState } from 'react';
+import NavBar from '../../components/NavBar/navBar';
+import ExperienceHolder from '../../components/ExperienceHolder/ExperienceHolder';
+import AboutMe from '../../components/AboutMe/AboutMe';
+import './HomePage.css';
+import Socials from '../../components/Socials/socials';
+import ProjectsHolder from '../../components/ProjectsHolder/ProjectsHolder';
+import portrait from '../../media/Skiing.jpg';
+import DublinGlobe from '../../components/DublinGlobe/DublinGlobe';
 
-const dublinTime = new Intl.DateTimeFormat("en-IE", {
-  timeZone: "Europe/Dublin",
-  hour: "2-digit",
-  minute: "2-digit",
+const dublinTime = new Intl.DateTimeFormat('en-IE', {
+  timeZone: 'Europe/Dublin',
+  hour: '2-digit',
+  minute: '2-digit',
   hour12: false,
 });
 
@@ -26,7 +26,7 @@ const HomePage = () => {
 
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       console.log(window.innerWidth);
       setWidth(window.innerWidth);
     });
@@ -54,7 +54,7 @@ const HomePage = () => {
             <div className="home-page__container--intro">
               <h1 className="home-page__title--name">Stephen Byrne</h1>
               <h2 className="home-page__title--role">
-                Software Engineer @{" "}
+                Software Engineer @{' '}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
