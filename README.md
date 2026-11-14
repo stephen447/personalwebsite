@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Pre-commit checks
+
+Husky installs the Git hooks automatically when you run `npm install` (or `npm ci`). Run `npm run prepare` to reinstall them in an existing checkout.
+
+Before each commit, the hook runs all unit tests once, ESLint, and Prettier's formatting check. A failed check blocks the commit. Checks run against the working tree; stage the changes you intend to commit after fixing any issues.
+
+Run `npm run precommit` to perform the same checks manually. To fix formatting, run `npm run format` and stage the formatted files before retrying the commit.
+
 ### `npm run lint`
 
 Checks JavaScript and JSX in `src` using Create React App's ESLint rules. Warnings fail the check. Formatting rules that conflict with Prettier are disabled.
