@@ -1,7 +1,7 @@
 import './ExperienceHolder.css';
 import Experience from '../Experience/Experience';
-import Award from './Award';
-import Certificate from './Certificate';
+import Award from '../Award/Award';
+import Certificate from '../Certificate/Certificate';
 import ServiceNowLogo from '../../media/Servicenow.png';
 import RobotifyLogo from '../../media/Robotify Logo.png';
 

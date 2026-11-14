@@ -1,3 +1,10 @@
+import './Certificate.css';
+
+/**
+ * Display a certificate with optional verification and download links.
+ * @param {{ name: string, provider: string, date?: string, dateTime?: string, url?: string, downloadUrl?: string }} props Certificate details.
+ * @returns {import('react').ReactElement} Certificate list item.
+ */
 export default function Certificate({
   name,
   provider,
@@ -7,11 +14,11 @@ export default function Certificate({
   downloadUrl,
 }) {
   return (
-    <li className="experienceholder__recognition-item">
-      <div className="experienceholder__recognition-name">
+    <li className="certificate">
+      <div className="certificate__name">
         {url ? (
           <a
-            className="experienceholder__certificate-link"
+            className="certificate__link"
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -22,7 +29,7 @@ export default function Certificate({
           name
         )}
       </div>
-      <p className="experienceholder__recognition-issuer">
+      <p className="certificate__issuer">
         {provider}
         {date && (
           <>
@@ -32,11 +39,7 @@ export default function Certificate({
         )}
       </p>
       {downloadUrl && (
-        <a
-          className="experienceholder__certificate-download"
-          href={downloadUrl}
-          download
-        >
+        <a className="certificate__download" href={downloadUrl} download>
           Download certificate
         </a>
       )}
