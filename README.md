@@ -2,7 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## GitHub Actions
+
+The workflow in `.github/workflows/ci.yml` runs unit tests, ESLint, and Prettier checks as separate jobs on every push and pull request. You can also start it manually from GitHub's Actions tab. It uses Node.js 22 and installs dependencies from `package-lock.json` with `npm ci`.
+
+Commit and push the workflow file to enable it on GitHub. Failed checks mark the workflow as failed; to prevent merging, configure a branch ruleset requiring the `test:unit`, `lint`, and `format:check` status checks. These checks appear after the workflow's first run.
+
+## Local commands
 
 In the project directory, you can run:
 

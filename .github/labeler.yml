@@ -1,0 +1,20 @@
+# Configuration for the existing actions/labeler@v4 workflow.
+documentation:
+  - '**/*.md'
+
+frontend:
+  - 'src/**'
+  - 'public/**'
+
+tests:
+  - 'src/**/*.test.js'
+  - 'src/**/*.test.jsx'
+  - 'src/setupTests.js'
+
+dependencies:
+  - 'package.json'
+  - 'package-lock.json'
+
+ci:
+  - '.github/**'
+  - '.husky/**'
