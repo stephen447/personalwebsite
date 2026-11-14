@@ -26,10 +26,12 @@ const HomePage = () => {
 
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      console.log(window.innerWidth);
+    /** Synchronize the mobile scroll cue with the current viewport width. */
+    const handleResize = () => {
       setWidth(window.innerWidth);
-    });
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
