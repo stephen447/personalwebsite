@@ -9,10 +9,10 @@ const HOME_VIEW = { longitude: -18, latitude: 35 };
  * texture's orientation: +Y is north, +X is 0° longitude, and −Z is 90° east.
  * @param {number} longitude Longitude in degrees, positive east of Greenwich.
  * @param {number} latitude Latitude in degrees, positive north of the equator.
- * @param {number} [radius=1] Distance from the globe's centre in scene units.
+ * @param {number} radius Distance from the globe's centre in scene units.
  * @returns {THREE.Vector3} Position in the globe's coordinate system.
  */
-function positionAt(longitude, latitude, radius = 1) {
+function positionAt(longitude, latitude, radius) {
   const lat = THREE.MathUtils.degToRad(latitude);
   const lon = THREE.MathUtils.degToRad(longitude);
   return new THREE.Vector3(
