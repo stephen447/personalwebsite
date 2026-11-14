@@ -1,6 +1,6 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import WelcomeOverlay from './components/WelcomeOverlay/WelcomeOverlay';
 
 function App() {

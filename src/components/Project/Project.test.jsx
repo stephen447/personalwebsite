@@ -1,5 +1,5 @@
 import { render, screen, within } from '@testing-library/react';
-import Project from './project';
+import Project from './Project';
 
 const project = {
   title: 'Example project',

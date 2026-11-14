@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import NavBar from '../../components/NavBar/navBar';
+import { useEffect, useRef, useState } from 'react';
+import NavBar from '../../components/NavBar/NavBar';
 import ExperienceHolder from '../../components/ExperienceHolder/ExperienceHolder';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import './HomePage.css';
-import Socials from '../../components/Socials/socials';
+import Socials from '../../components/Socials/Socials';
 import ProjectsHolder from '../../components/ProjectsHolder/ProjectsHolder';
 import portrait from '../../media/Skiing.jpg';
 import DublinGlobe from '../../components/DublinGlobe/DublinGlobe';

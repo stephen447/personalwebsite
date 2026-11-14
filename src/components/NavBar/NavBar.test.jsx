@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import NavBar from './navBar';
+import NavBar from './NavBar';
 
 describe('NavBar navigation', () => {
   afterEach(() => jest.restoreAllMocks());

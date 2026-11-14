@@ -1,5 +1,4 @@
-import React from 'react';
-import './navBar.css';
+import './NavBar.css';
 export default function NavBar() {
   /**
    * This function scrolls to the section of the page that matches the target ID

@@ -1,5 +1,5 @@
-import './project.css';
-import Techstack from '../TechStack/techStack';
+import './Project.css';
+import TechStack from '../TechStack/TechStack';
 import linkIcon from '../../media/linkIcon.png';
 
 export default function Project(props) {
@@ -20,7 +20,7 @@ export default function Project(props) {
 
       <p className="project__description">{description}</p>
       <div className="project__techstack">{techstack}</div>
-      <Techstack techStack={techStack}></Techstack>
+      <TechStack techStack={techStack}></TechStack>
     </div>
   );
 

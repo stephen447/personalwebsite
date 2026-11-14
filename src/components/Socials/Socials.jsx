@@ -1,9 +1,8 @@
-import React from 'react';
 import Email from '../../media/email.png';
 import LinkedIn from '../../media/linkedIn.png';
 import GitHub from '../../media/github.png';
 import Download from '../../media/download.png';
-import './socials.css';
+import './Socials.css';
 
 export default function Socials() {
   return (
