@@ -30,6 +30,7 @@ These instructions apply throughout this repository. Follow any more specific `A
 - Use UPPER_SNAKE_CASE for fixed module-level constants, such as `SESSION_KEY`.
 - Use lowercase kebab-case for new image and document assets, such as `profile-photo.jpg`. Preserve existing public URLs when modifying assets.
 - Use component-scoped CSS classes with a consistent BEM-style structure, such as `nav-bar`, `nav-bar__link`, and `nav-bar__link--active`. Follow the component’s existing naming convention when modifying its styles.
+- Organise CSS attributes in a class in alphabetical order
 
 ## Accessibility and presentation
 
@@ -50,6 +51,12 @@ These instructions apply throughout this repository. Follow any more specific `A
   - `Experience.jsx` → `Experience.test.jsx`
   - `createGlobe.js` → `createGlobe.test.js`
 - Use `describe` to group related behaviour and `test.each` for meaningful sets of input cases.
+- Name the outer `describe` after the component or module; use nested groups for
+  distinct behaviours when they improve readability. Keep setup and cleanup hooks
+  inside the suite they apply to.
+- Start test descriptions with lowercase action phrases, such as
+  `test('closes the photo when the close button is clicked', ...)`. Preserve
+  proper noun casing. Capitalisation is a style convention, not a Jest requirement.
 - Structure each test as arrange, act, and assert.
 
 ## Verification workflow
