@@ -17,6 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prepare": "husky install",
+    "test:unit": "react-scripts test --watchAll=false --watchman=false --runInBand",
+    "precommit": "npm run test:unit && npm run lint && npm run format:check",
     "lint": "eslint src --ext .js,.jsx --max-warnings=0",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write .",
@@ -49,6 +52,7 @@
   "devDependencies": {
     "eslint": "8.52.0",
     "eslint-config-prettier": "10.1.8",
+    "husky": "8.0.3",
     "prettier": "3.10.1"
   }
 }
