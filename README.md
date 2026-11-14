@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run lint`
+
+Checks JavaScript and JSX in `src` using Create React App's ESLint rules. Warnings fail the check. Formatting rules that conflict with Prettier are disabled.
+
+### `npm run lint:fix`
+
+Applies available ESLint fixes. Any remaining issues must be fixed manually. Use `npm run format` for formatting.
+
 ### `npm run format`
 
 Formats project files with Prettier. Generated output, dependencies, coverage, and the npm lockfile are excluded.

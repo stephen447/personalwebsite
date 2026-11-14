@@ -17,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "lint": "eslint src --ext .js,.jsx --max-warnings=0",
+    "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "start": "react-scripts start",
@@ -25,9 +27,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "root": true,
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -43,6 +47,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "8.52.0",
+    "eslint-config-prettier": "10.1.8",
     "prettier": "3.10.1"
   }
 }
