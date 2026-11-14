@@ -19,6 +19,7 @@
   "scripts": {
     "prepare": "husky install",
     "test:unit": "react-scripts test --watchAll=false --watchman=false --runInBand",
+    "test:coverage": "npm run test:unit -- --coverage",
     "precommit": "npm run test:unit && npm run lint && npm run format:check",
     "lint": "eslint src --ext .js,.jsx --max-warnings=0",
     "lint:fix": "npm run lint -- --fix",
@@ -28,6 +29,47 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.test.{js,jsx}",
+      "!src/setupTests.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
+    "moduleNameMapper": {
+      "^three$": "<rootDir>/node_modules/three/build/three.module.js"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!three/)"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": [
+        "babel-jest",
+        {
+          "babelrc": false,
+          "configFile": false,
+          "presets": [
+            [
+              "babel-preset-react-app",
+              {
+                "runtime": "automatic"
+              }
+            ]
+          ],
+          "plugins": [
+            "@babel/plugin-transform-class-static-block"
+          ]
+        }
+      ]
+    }
   },
   "eslintConfig": {
     "root": true,
@@ -50,6 +92,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-class-static-block": "7.29.14",
     "eslint": "8.52.0",
     "eslint-config-prettier": "10.1.8",
     "husky": "8.0.3",

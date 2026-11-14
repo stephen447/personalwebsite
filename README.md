@@ -12,6 +12,14 @@ Commit and push the workflow file to enable it on GitHub. Failed checks mark the
 
 In the project directory, you can run:
 
+### `npm run test:coverage`
+
+Runs the tests with coverage for all JavaScript and JSX application files in `src`, including files not imported by tests. Only test files and `setupTests.js` are excluded. The command fails if statements, branches, functions, or lines fall below 100%. Open `coverage/lcov-report/index.html` for the detailed report.
+
+The suite tests component interactions, startup, performance metric registration, and globe lifecycle and camera behavior. Renderer tests keep Three.js geometry and camera calculations real while mocking WebGL, texture loading, orbit controls, and resize observation. Native dialog behavior is modeled in jsdom. Coverage measures exercised code; visual rendering and native browser behavior still need browser testing.
+
+Jest transforms Three.js ES modules and static class blocks using the existing React Babel preset plus `@babel/plugin-transform-class-static-block`. The production build configuration is unchanged. The 100% threshold applies when coverage is requested; `npm run precommit` and the current CI unit-test job run the tests without coverage collection.
+
 ### Pre-commit checks
 
 Husky installs the Git hooks automatically when you run `npm install` (or `npm ci`). Run `npm run prepare` to reinstall them in an existing checkout.
