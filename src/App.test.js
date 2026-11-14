@@ -22,7 +22,7 @@ afterEach(() => {
 });
 
 test('runs the greetings, holds Irish until 2.1s and removes the overlay at 2.8s', () => {
-  const { container } = renderWelcome();
+  renderWelcome();
   expect(screen.getByText('Hello')).toBeInTheDocument();
   for (const [ms, greeting] of [
     [400, 'Bonjour'],
@@ -36,7 +36,7 @@ test('runs the greetings, holds Irish until 2.1s and removes the overlay at 2.8s
   }
   expect(screen.queryByText('Hello, in Irish')).not.toBeInTheDocument();
   act(() => jest.advanceTimersByTime(600));
-  expect(container.querySelector('.welcome-overlay--exit')).toBeInTheDocument();
+  expect(screen.getByRole('dialog')).toHaveClass('welcome-overlay--exit');
   act(() => jest.advanceTimersByTime(700));
   expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   expect(screen.getByRole('link')).toBeInTheDocument();
