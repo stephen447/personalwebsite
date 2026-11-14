@@ -77,6 +77,34 @@
       "react-app",
       "react-app/jest",
       "prettier"
+    ],
+    "rules": {
+      "react/jsx-pascal-case": "error",
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".jsx"
+          ]
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/index.js"
+        ],
+        "rules": {
+          "react/jsx-filename-extension": [
+            "error",
+            {
+              "extensions": [
+                ".js"
+              ]
+            }
+          ]
+        }
+      }
     ]
   },
   "browserslist": {
