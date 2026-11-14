@@ -1,4 +1,5 @@
-import { act, render, screen } from '@testing-library/react';
+import { act } from 'react';
+import { render, screen } from '@testing-library/react';
 import WelcomeOverlay from './components/WelcomeOverlay/WelcomeOverlay';
 
 const renderWelcome = () =>
