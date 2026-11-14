@@ -1,14 +1,20 @@
 import './techStack.css';
 
+/**
+ * Render the technologies associated with a project.
+ * @param {{ techStack?: Iterable<string> }} props Project technologies.
+ * @returns {import('react').ReactElement} Technology list.
+ */
 export default function Techstack(props) {
   let techstack = props.techStack || [];
   // convert to an arry
   techstack = Array.from(techstack);
   return (
     <div className="techstack__container">
-      {/* I want a for loop cyling through an array of techstacks and creating them*/}
       {techstack.map((tech) => (
-        <div className="techstack__container--technology">{tech}</div>
+        <div className="techstack__container--technology" key={tech}>
+          {tech}
+        </div>
       ))}
     </div>
   );
