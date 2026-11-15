@@ -7,6 +7,8 @@ describe('NavBar navigation', () => {
   test.each([
     ['About Me', 'about-me'],
     ['Experience', 'experience__container'],
+    ['Certificates', 'certificates'],
+    ['Awards', 'awards'],
     ['Projects', 'project__container'],
   ])('navigates %s to the matching page section', (name, id) => {
     const scrollIntoView = jest.fn();

@@ -1,60 +1,7 @@
 import './ExperienceHolder.css';
 import Experience from '../Experience/Experience';
-import Award from '../Award/Award';
-import Certificate from '../Certificate/Certificate';
 import ServiceNowLogo from '../../media/Servicenow.png';
 import RobotifyLogo from '../../media/Robotify Logo.png';
-
-const certificates = [
-  {
-    name: 'Certified System Administrator',
-    provider: 'ServiceNow',
-    date: 'July 2025',
-    dateTime: '2025-07',
-    url: null,
-    downloadUrl: null,
-  },
-  {
-    name: 'Unsupervised Learning, Recommenders, Reinforcement Learning',
-    provider: 'Coursera',
-    date: 'Nov 2025',
-    dateTime: '2025-11',
-    url: 'https://coursera.org/verify/0TJ26WPKCQ78',
-    downloadUrl: null,
-  },
-  {
-    name: 'Advanced Learning Algorithms',
-    provider: 'Coursera',
-    date: 'Oct 2025',
-    dateTime: '2025-10',
-    url: 'https://www.coursera.org/account/accomplishments/verify/P0KG0DZG15NA',
-    downloadUrl: null,
-  },
-  {
-    name: 'Machine Learning',
-    provider: 'Coursera',
-    date: 'Nov 2025',
-    dateTime: '2025-11',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/02DYR23OXCJS',
-    downloadUrl: null,
-  },
-  {
-    name: 'Supervised Machine Learning: Regression and Classification',
-    provider: 'Coursera',
-    date: 'Oct 2025',
-    dateTime: '2025-10',
-    url: null,
-    downloadUrl: null,
-  },
-];
-
-const awards = [
-  {
-    name: 'ServiceNow Llama Award',
-    issuer: 'ServiceNow',
-    date: 'Q2 2026',
-  },
-];
 
 const serviceNowDescription = [
   'I’m part of the Impact team, working on ServiceNow Otto for Setup. I joined at the outset and have helped build the product from the ground up, developing agentic onboarding and configuration experiences that help customers get more value from ServiceNow. My work spans the full development lifecycle, including agent development, frontend and backend engineering, testing, support, and releases.',
@@ -170,22 +117,6 @@ export default function ExperienceHolder() {
           },
         ]}
       />
-      <section className="experienceholder__recognition">
-        <h2 className="experienceholder__section-title">Certificates</h2>
-        <ul className="experienceholder__recognition-list">
-          {certificates.map((certificate) => (
-            <Certificate key={certificate.name} {...certificate} />
-          ))}
-        </ul>
-      </section>
-      <section className="experienceholder__recognition">
-        <h2 className="experienceholder__section-title">Awards</h2>
-        <ul className="experienceholder__recognition-list">
-          {awards.map((award) => (
-            <Award key={award.name} {...award} />
-          ))}
-        </ul>
-      </section>
     </div>
   );
 }

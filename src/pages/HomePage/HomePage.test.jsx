@@ -32,6 +32,55 @@ describe('HomePage', () => {
   });
 
   describe('portfolio content', () => {
+    test('renders each main section once in navigation order', () => {
+      render(<HomePage />);
+      const names = [
+        "Dia Duit, I'm Stephen",
+        'Experience',
+        'Certificates',
+        'Awards',
+        'Projects',
+      ];
+      expect(
+        screen
+          .getAllByRole('heading')
+          .map((heading) => heading.textContent)
+          .filter((name) => names.includes(name)),
+      ).toEqual(names);
+      for (const name of names) {
+        expect(
+          screen.getAllByRole('heading', { name, exact: true }),
+        ).toHaveLength(1);
+      }
+      expect(
+        screen.getByRole('region', { name: 'Certificates' }),
+      ).toHaveAttribute('id', 'certificates');
+      expect(screen.getByRole('region', { name: 'Awards' })).toHaveAttribute(
+        'id',
+        'awards',
+      );
+      expect(
+        screen
+          .getAllByRole('link')
+          .filter((link) =>
+            [
+              '#about-me',
+              '#experience__container',
+              '#certificates',
+              '#awards',
+              '#project__container',
+            ].includes(link.getAttribute('href')),
+          )
+          .map((link) => link.textContent),
+      ).toEqual([
+        'About Me',
+        'Experience',
+        'Certificates',
+        'Awards',
+        'Projects',
+      ]);
+    });
+
     test('renders the portfolio sections and working contact destinations', () => {
       render(<HomePage />);
       for (const name of [

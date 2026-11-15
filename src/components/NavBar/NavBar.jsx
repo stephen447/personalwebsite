@@ -24,6 +24,16 @@ export default function NavBar() {
           </a>
         </div>
         <div className="nav-container">
+          <a href="#certificates" onClick={scrollToSection}>
+            Certificates
+          </a>
+        </div>
+        <div className="nav-container">
+          <a href="#awards" onClick={scrollToSection}>
+            Awards
+          </a>
+        </div>
+        <div className="nav-container">
           <a href="#project__container" onClick={scrollToSection}>
             Projects
           </a>

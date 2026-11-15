@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import ExperienceHolder from '../../components/ExperienceHolder/ExperienceHolder';
+import CertificatesHolder from '../../components/CertificatesHolder/CertificatesHolder';
+import AwardsHolder from '../../components/AwardsHolder/AwardsHolder';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import './HomePage.css';
 import Socials from '../../components/Socials/Socials';
@@ -96,6 +98,8 @@ const HomePage = () => {
         <div className="home-page__container--content-right">
           <AboutMe />
           <ExperienceHolder />
+          <CertificatesHolder />
+          <AwardsHolder />
           <ProjectsHolder />
         </div>
       </div>
