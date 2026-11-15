@@ -1,12 +1,17 @@
 @font-face {
-  font-family: 'Kdam Thmor Pro';
   font-display: swap;
+  font-family: 'Kdam Thmor Pro';
   src: url('./fonts/KdamThmorPro-Regular.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: var(--font-family-body);
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
+}
+
+a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
 }

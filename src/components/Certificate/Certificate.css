@@ -1,26 +1,22 @@
 .certificate {
+  background: var(--surface-card);
+  border: var(--border-card);
+  border-radius: var(--radius-compact);
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 16px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.055),
-    rgba(255, 255, 255, 0.025)
-  );
+  gap: var(--space-1);
+  padding: var(--space-4);
 }
 
 .certificate__name {
-  color: #f5f1e9;
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
 }
 
 .certificate__issuer {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-meta);
   margin: 0;
-  color: rgba(245, 241, 233, 0.72);
-  font-size: 0.9rem;
 }
 
 .certificate__link {
@@ -30,14 +26,9 @@
 }
 
 .certificate__download {
-  width: fit-content;
-  margin-top: 6px;
-  color: #a0ffc0;
-  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-size: var(--font-size-meta);
+  margin-top: var(--space-1-half);
   text-underline-offset: 3px;
-}
-
-.certificate__download:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
+  width: fit-content;
 }

@@ -1,65 +1,60 @@
 .dublin-globe {
-  width: clamp(160px, 19vw, 250px);
-  max-width: 100%;
   margin: 0;
+  max-width: 100%;
   text-align: center;
+  width: clamp(160px, 19vw, 250px);
 }
 .dublin-globe__canvas {
-  display: block;
-  width: 100%;
-  height: auto;
   aspect-ratio: 1;
+  border-radius: var(--radius-circle);
   cursor: grab;
+  display: block;
+  height: auto;
   touch-action: none;
-  border-radius: 50%;
+  width: 100%;
 }
 .dublin-globe__canvas:active {
   cursor: grabbing;
 }
-.dublin-globe__canvas:focus-visible,
-.dublin-globe__reset:focus-visible {
-  outline: 2px solid #a0ffc0;
-  outline-offset: 3px;
-}
 .dublin-globe__reset {
-  padding: 6px 10px;
-  border: 0;
   background: transparent;
-  color: #e3e0e0;
+  border: 0;
+  color: var(--color-text-secondary);
+  cursor: pointer;
   font: inherit;
   font-size: 12px;
-  cursor: pointer;
+  padding: var(--space-1-half) var(--space-2-half);
 }
 .dublin-globe__reset span {
-  color: #a0ffc0;
+  color: var(--color-accent);
   margin-right: 5px;
 }
 .dublin-globe__hint {
+  color: var(--color-text-muted);
   display: block;
   font-size: 10px;
-  color: #a6adb9;
 }
 .dublin-globe__scene {
   position: relative;
 }
 .dublin-globe__label {
-  position: absolute;
-  transform: translate(9px, -50%);
-  color: #f5f1e9;
+  color: var(--color-text-primary);
   font-size: 11px;
+  pointer-events: none;
+  position: absolute;
   text-shadow:
     0 1px 4px #000,
     0 0 6px #000;
-  pointer-events: none;
+  transform: translate(9px, -50%);
 }
 .dublin-globe__loading {
-  position: absolute;
-  inset: 0;
+  background: var(--color-background);
+  border-radius: var(--radius-circle);
+  color: var(--color-text-muted);
   display: grid;
-  place-items: center;
-  background: #101226;
-  color: #a6adb9;
   font-size: 12px;
-  border-radius: 50%;
+  inset: 0;
+  place-items: center;
   pointer-events: none;
+  position: absolute;
 }

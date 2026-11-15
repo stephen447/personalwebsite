@@ -1,0 +1,83 @@
+/* Shared visual values only. Layout and selectors stay with their components. */
+:root {
+  /* Borders — reusable outlines for cards and subtle surfaces. */
+  --border-card: 1px solid var(--color-border-card);
+  --border-subtle: 1px solid var(--color-border-subtle);
+
+  /* Colors — backgrounds, accents, borders, and text hierarchy. */
+  --color-accent: #a0ffc0;
+  --color-background: #101226;
+  --color-border-card: rgb(255 255 255 / 12%);
+  --color-border-hover: rgb(255 255 255 / 22%);
+  --color-border-subtle: rgb(255 255 255 / 14%);
+  --color-glow: #21275b;
+  --color-heading-accent: rgb(111 226 84 / 75%);
+  --color-tech-accent: rgb(2 237 206);
+  --color-text-muted: rgb(245 241 233 / 72%);
+  --color-text-primary: #f5f1e9;
+  --color-text-secondary: #e3e0e0;
+
+  /* Motion — shared durations and easing curves. */
+  --duration-fast: 180ms;
+  --duration-normal: 300ms;
+  --ease-out: ease-out;
+  --ease-standard: ease;
+
+  /* Keyboard focus — consistent visible outlines for interactive elements. */
+  --focus-offset: 3px;
+  --focus-outline: 2px solid var(--color-accent);
+
+  /* Typography — font family, text sizes, and emphasis. */
+  --font-family-body: 'Kdam Thmor Pro', sans-serif;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.75rem;
+  --font-size-heading: clamp(1.6rem, 3vw, 2rem);
+  --font-size-meta: 0.9rem;
+  --font-size-nav: 1.2rem;
+  --font-size-small: 0.8rem;
+  --font-size-subheading: 1.35rem;
+  --font-weight-semibold: 600;
+
+  /* Shape — corner radii for cards, badges, and circular elements. */
+  --radius-card: 16px;
+  --radius-circle: 50%;
+  --radius-compact: 12px;
+  --radius-pill: 999px;
+  --radius-small: 6px;
+
+  /* Shadows — elevation for cards and photographs. */
+  --shadow-card: 0 10px 24px rgb(0 0 0 / 12%);
+  --shadow-photo: 0 8px 20px rgb(0 0 0 / 18%);
+
+  /* Spacing — a 4px scale with half steps for padding, margins, and gaps. */
+  --space-1: 4px;
+  --space-1-half: 6px;
+  --space-2: 8px;
+  --space-2-half: 10px;
+  --space-3: 12px;
+  --space-3-half: 14px;
+  --space-4: 16px;
+  --space-4-half: 18px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-half: 2px;
+
+  /* Surfaces — fills and overlays layered over the page background. */
+  --surface-backdrop: rgb(0 0 0 / 75%);
+  --surface-card: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 5.5%),
+    rgb(255 255 255 / 2.5%)
+  );
+  --surface-card-hover: rgb(255 255 255 / 7%);
+  --surface-raised: rgb(255 255 255 / 8%);
+  --surface-subtle: rgb(255 255 255 / 6%);
+  --surface-tech: rgb(2 120 104 / 28.4%);
+
+  /* Composed transitions — keep related card effects synchronized. */
+  --transition-card:
+    border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}

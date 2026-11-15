@@ -1,11 +1,11 @@
 .welcome-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgb(16 18 38);
-  color: #f5f1e9;
+  background: var(--color-background);
+  color: var(--color-text-primary);
   display: grid;
+  inset: 0;
   place-items: center;
+  position: fixed;
+  z-index: 1000;
 }
 
 .welcome-greeting {

@@ -1,138 +1,126 @@
-.experience__container:hover {
-  background-color: rgba(255, 255, 255, 0.052);
-  border-radius: 10px;
-  z-index: 20;
+.experience__container {
+  background: var(--surface-card);
+  border: var(--border-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-5);
+  transition: var(--transition-card);
 }
 
-.experience__container {
-  z-index: 20;
-  padding: 10px;
+.experience__container:hover {
+  background-color: var(--surface-card-hover);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
 }
 
 .experience__header {
-  display: flex;
   align-items: center;
+  display: flex;
+  gap: var(--space-4);
   justify-content: center;
-  gap: 16px;
 }
 
 .experience__roles {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin: 8px 0 16px;
+  gap: var(--space-3-half);
+  margin: var(--space-2) 0 var(--space-4);
 }
 
 .experience__role {
+  align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: center;
-  gap: 4px 10px;
-  text-align: center;
+  gap: var(--space-1) var(--space-2-half);
 }
 
 .experience__role-title {
-  margin: 0;
-  font-size: 1rem;
+  font-size: var(--font-size-body);
   font-weight: 1000;
-  -webkit-text-stroke: 0.35px currentColor;
+  margin: 0;
 }
 
 .experience__role-timeframe {
-  opacity: 0.8;
-  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-meta);
 }
 
 .experience__description > p {
-  margin: 0 0 12px;
+  margin: 0 0 var(--space-3);
+  text-align: left;
 }
 
 .experience__description > p:last-child {
   margin-bottom: 0;
 }
 
-.experience__description.is-collapsed .experience__description-preview {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-}
-
 .experience__description-toggle,
 .experience__skills-toggle {
-  padding: 2px 6px;
-  border: 0;
   background: transparent;
+  border: 0;
   color: inherit;
+  cursor: pointer;
   font: inherit;
-  font-size: 0.8rem;
+  font-size: var(--font-size-small);
+  padding: var(--space-half) var(--space-1-half);
   text-decoration: underline;
   text-underline-offset: 3px;
-  cursor: pointer;
 }
 
 .experience__description-toggle {
   display: block;
-  margin: 10px auto 0;
+  margin: var(--space-2-half) auto 0;
 }
 
 .experience__skills {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin-top: 20px;
+  gap: var(--space-3-half);
+  margin-top: var(--space-5);
 }
 
 .experience__skill-category {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 6px;
+  gap: var(--space-1-half);
   max-width: 100%;
 }
 
 .experience__skill-category-title {
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
   margin: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
 }
 
 .experience__skill-list {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--space-1-half);
   justify-content: center;
-  gap: 6px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 .experience__skill {
-  padding: 3px 9px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  font-size: 0.8rem;
+  background: var(--surface-subtle);
+  border: var(--border-subtle);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-small);
   line-height: 1.4;
-}
-
-.experience__description-toggle:focus-visible,
-.experience__skills-toggle:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  padding: 3px 9px;
 }
 
 .experience__logo {
+  border-radius: var(--radius-small);
   display: block;
   flex: 0 0 auto;
-  width: 88px;
   height: 48px;
   object-fit: contain;
-  border-radius: 6px;
+  width: 88px;
 }
 
 .experience__logo--wordmark {
@@ -141,11 +129,24 @@
 
 @media (max-width: 480px) {
   .experience__header {
-    gap: 10px;
+    gap: var(--space-2-half);
   }
 
   .experience__logo {
-    width: 64px;
     height: 40px;
+    width: 64px;
+  }
+  .experience__container {
+    padding: var(--space-3-half);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience__container {
+    transition: none;
+  }
+
+  .experience__container:hover {
+    transform: none;
   }
 }

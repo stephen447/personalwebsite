@@ -32,6 +32,24 @@ These instructions apply throughout this repository. Follow any more specific `A
 - Use component-scoped CSS classes with a consistent BEM-style structure, such as `nav-bar`, `nav-bar__link`, and `nav-bar__link--active`. Follow the component’s existing naming convention when modifying its styles.
 - Organise CSS attributes in a class in alphabetical order
 
+## CSS tokens and ownership
+
+- Reuse the semantic custom properties in `src/styles/tokens.css` for shared
+  colors, surfaces, borders, shadows, spacing, typography, radii, and transitions.
+  The entry point loads these once; keep selectors and layout in component CSS.
+- Use names that describe a visual role, such as `--color-text-muted` or
+  `--surface-card`. Add a shared token only for a reusable value; keep one-off
+  dimensions, positioning, and percentages local to the component.
+- Keep breakpoint values literal in media queries. Standard CSS custom properties
+  cannot be used in media-query conditions.
+- Deduplicate selectors within a component where declarations are identical.
+  Do not introduce global utility classes just to share declarations; components
+  may repeat declarations while referencing the same tokens.
+- Put intentional element defaults in `index.css`, not component stylesheets.
+  Keep reduced-motion overrides after the animation rules they override.
+- Alphabetize declarations where safe, preserving shorthand/longhand precedence
+  and ordered browser fallbacks. Prettier formats CSS but does not sort properties.
+
 ## Accessibility and presentation
 
 - Use semantic HTML: buttons for actions, anchors for navigation, and associated labels for form controls.

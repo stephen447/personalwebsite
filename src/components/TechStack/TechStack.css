@@ -1,14 +1,3 @@
-.techstack {
-  display: flex;
-  border-radius: 20px;
-  margin: 5%;
-  padding: 5%;
-  justify-content: center;
-}
-img {
-  width: 15%;
-}
-
 .techstack__container {
   display: flex;
   flex-wrap: wrap;
@@ -17,9 +6,9 @@ img {
   margin-right: 5%;
 }
 .techstack__container--technology {
-  background-color: rgba(2, 120, 104, 0.284);
-  color: rgb(2, 237, 206);
-  width: fit-content;
+  background-color: var(--surface-tech);
+  border-radius: var(--radius-small);
+  color: var(--color-tech-accent);
   padding: 1%;
-  border-radius: 5px;
+  width: fit-content;
 }

@@ -1,17 +1,16 @@
 .app {
+  background-color: var(--color-background);
+  color: var(--color-text-muted);
   height: 100vh;
-  z-index: 0;
-  background-color: #101226;
-  color: rgb(175, 174, 174);
   overflow: hidden;
+  z-index: 0;
 }
 .glow {
+  background: radial-gradient(var(--color-glow), var(--color-background) 60%);
+  border-radius: var(--radius-circle);
+  height: 250px;
+  pointer-events: none; /* Allows mouse events to pass through the element */
   position: absolute;
   width: 250px;
-  height: 250px;
-  opacity: 1;
-  border-radius: 50%;
-  pointer-events: none; /* Allows mouse events to pass through the element */
   z-index: 10;
-  background: radial-gradient(#21275b, #101226 60%);
 }
